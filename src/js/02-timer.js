@@ -20,7 +20,8 @@ const options = {
     }
   },
 };
-  const btnStartTimerEl = document.querySelector("button[data-start]");
+
+const btnStartTimerEl = document.querySelector("button[data-start]");
 const fieldSelectDateEl = document.querySelector('input[type="text"]');
 const daysEl = document.querySelector("[data-days]");
 const hoursEl = document.querySelector("[data-hours]");
