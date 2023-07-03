@@ -29,9 +29,19 @@ const amount = Number.parseInt(document.querySelector('input[name="amount"]').va
     createPromise(position, promiseDelay)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
+        clearFormFields()
       })
       .catch(({ position, delay }) => {
         Notiflix.Notify.failure(`Rejected promise ${position} in ${delay}ms`);
+        clearFormFields()
       });
+    
+    
   }
 });
+
+function clearFormFields() {
+  document.querySelector('input[name="amount"]').value = "";
+  document.querySelector('input[name="delay"]').value = "";
+  document.querySelector('input[name="step"]').value = "";
+}
